@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page renders page unchanged 1`] = `
+<div>
+  <main>
+    <h1>
+      Hello, I'm your Next.js App
+    </h1>
+    <p>
+      Make web great again!
+    </p>
+  </main>
+</div>
+`;
