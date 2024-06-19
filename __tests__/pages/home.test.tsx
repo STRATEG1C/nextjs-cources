@@ -17,7 +17,9 @@ describe('Home page', () => {
       name: "Hello, I'm your Next.js App",
     });
 
-    const description = screen.getByText('Make web great again!');
+    const description = screen.getByText(
+      'Make web great again! Deployed to Vercel 👍'
+    );
 
     expect(heading).toBeInTheDocument();
     expect(description).toBeInTheDocument();

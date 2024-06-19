@@ -7,7 +7,7 @@ exports[`Home page renders page unchanged 1`] = `
       Hello, I'm your Next.js App
     </h1>
     <p>
-      Make web great again!
+      Make web great again! Deployed to Vercel 👍
     </p>
   </main>
 </div>
