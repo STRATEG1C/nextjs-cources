@@ -16,6 +16,11 @@
     "e2e:ui": "npx playwright test --ui"
   },
   "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.21",
+    "@mui/material-nextjs": "^5.15.11",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
     "@typescript-eslint/parser": "^7.12.0",
     "eslint-plugin-prettier": "^5.1.3",
