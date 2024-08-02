@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  postgress_db:
+    image: postgres:16.3-alpine
+    container_name: movies_postgress_db
+    restart: always
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_DB: dev
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev
+
+  adminer:
+    image: adminer:latest
+    container_name: movies_adminer
+    restart: always
+    ports:
+      - "8080:8080"
+
+volumes:
+  db:
+    driver: local
+  cache:
+    driver: local

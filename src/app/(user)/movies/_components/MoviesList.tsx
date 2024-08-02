@@ -8,60 +8,31 @@ import {
 } from '@mui/material';
 import React from 'react';
 
-const movies: { id: number; title: string }[] = [
-  {
-    id: 1,
-    title: 'The Pirates',
-  },
-  {
-    id: 2,
-    title: 'Star Wars',
-  },
-  {
-    id: 3,
-    title: 'Sonic in cinema',
-  },
-  {
-    id: 4,
-    title: 'Big Dreams',
-  },
-  {
-    id: 5,
-    title: 'Operator Joe',
-  },
-  {
-    id: 6,
-    title: 'Interstellar',
-  },
-  {
-    id: 7,
-    title: 'Wonderland',
-  },
-  {
-    id: 8,
-    title: 'Barbie',
-  },
-  {
-    id: 9,
-    title: 'Openheimer',
-  },
-  {
-    id: 10,
-    title: 'The Day after tomorrow',
-  },
-];
+interface Movie {
+  id: number;
+  title: string;
+  thumbnail: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
-export function MoviesList() {
+interface MoviesListProps {
+  movies: Movie[];
+}
+
+export function MoviesList(props: MoviesListProps) {
+  const { movies } = props;
+
   return (
     <Grid container spacing={2}>
       {movies.map((movie) => (
-        <Grid key={movie.id} item lg={3}>
+        <Grid key={movie.id} item lg={3} md={4} sm={6}>
           <Card>
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="400"
-                image="https://placehold.co/500x500"
+                image={movie.thumbnail}
                 alt="green iguana"
               />
               <CardContent>

@@ -1,7 +1,7 @@
 'use client';
 
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme';
+import theme from '@/configs/theme';
 
 export function StyledRoot({
   children,

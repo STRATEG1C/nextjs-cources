@@ -1,6 +1,6 @@
 import { AppBar, Box, Button, Container, Typography } from '@mui/material';
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -32,7 +32,7 @@ export default function RootLayout({
             </Typography>
             <Box
               sx={{
-                display: { lg: 'flex' },
+                display: { sm: 'flex' },
               }}
             >
               <Button sx={{ my: 2, color: 'white', display: 'block' }}>
