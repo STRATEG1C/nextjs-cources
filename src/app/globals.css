@@ -4,3 +4,13 @@
   box-sizing: border-box;
   list-style-type: none;
 }
+
+body {
+  background-color: #1b2838;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

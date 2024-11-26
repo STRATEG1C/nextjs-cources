@@ -1,11 +1,12 @@
-import { TimeoutedRedirect } from '@/app/_components/TimeoutedRedirect';
+import { GamesList } from '@/app/_components/GamesList';
+import { Suspense } from 'react';
 
 export default function Home() {
   return (
     <main>
-      <h1>Hello, I&apos;m your Next.js App</h1>
-      <p>Make web great again! Deployed to Vercel 👍</p>
-      <TimeoutedRedirect ms={2000} to="/movies" />
+      <Suspense fallback={<p>Loading...</p>}>
+        <GamesList />
+      </Suspense>
     </main>
   );
 }

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { StyledRoot } from './_components';
 import './globals.css';
+import StyledComponentsRegistry from '@/lib/registry';
+import { Header } from '@/app/_components/Header';
+import { Container } from '@/shared/components';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,12 +22,13 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Cinema App</title>
+        <title>Games Store</title>
       </head>
       <body className={inter.className}>
-        <AppRouterCacheProvider>
-          <StyledRoot>{children}</StyledRoot>
-        </AppRouterCacheProvider>
+        <StyledComponentsRegistry>
+          <Header />
+          <Container>{children}</Container>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
